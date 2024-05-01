@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
+;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Syne", sans-serif;
+    width: 100%;
+    height: 100vh;
+    background: #D5DBDB;
+    overflow-x: hidden;
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+
+nav {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.input {
+    position: relative;
+}
+
+.input input {
+    padding: 10px 70px;
+    outline: none;
+    border: none;
+    background: #F2F3F4;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 3px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.input::placeholder {
+    color: #555;
+    font-family: "Syne", sans-serif;
+}
+
+.input i {
+    position: absolute;
+    left: 20px;
+    top: 8px;
+    z-index: 99;
+    color: #333;
+}
+
+#cart {
+    padding: 12px 15px;
+    border-radius: 5px;
+    background: #F2F3F4;
+    box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.1);
+}
+
+.brand {
+    margin-top: 10px;
+    display: flex;
+    margin: 0 30px;
+    justify-content: space-between;
+    gap: 5px;
+    align-items: center;
+}
+
+.brand img {
+    width: 55px;
+    padding: 5px;
+    border-radius: 5px;
+    background: #F2F3F4;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.brand img:nth-child(1) {
+    padding: 11px 6px !important;
+}
+
+.brand img:nth-child(3) {
+    padding: 0px 5px !important;
+}
+
+.brand img:nth-child(4) {
+    padding: 12px 5px;
+}
+
+.box {
+    margin-top: 5px;
+}
+
+.box h2 {
+    padding-left: 25px;
+}
+
+
+.bx {
+    width: 150px;
+    height: 150px;
+    border-radius: 15px;
+    background: #E5E7E9;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.bx h4 {
+    font-size: 12px;
+    padding: 2px 7px;
+    background: #99A3A4;
+    color: #ABEBC6;
+    width: 60%;
+    overflow: hidden;
+    border-radius: 5px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 20px;
+}
+
+.bx .img {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.bx img {
+    width: 100px;
+}
+
+.bx i {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+}
+
+.bx i:hover {
+    cursor: pointer;
+    color: #ff7200;
+    filter: drop-shadow(0 0 4px #ff7200);
+}
+.card .bottom {
+    padding-left: 5px;
+    line-height: 0px;
+}
+.bottom h4:nth-child(1) {
+    color: #555;
+}
+.bottom h4:nth-child(2) {
+    color: #333;
+}
+.bottom h4 span {
+    text-decoration: line-through;
+    font-size: 12px;
+    padding-left: 5px;
+}
+
+.shoe{
+   padding: 0 50px;
+    gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+@media (max-width:678px)
+{
+
+    .shoe{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.container h3{
+    padding-top: 20px;
+    padding-left: 15px;
+}
+
+.access{
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    bottom: 10px;
+    right: 60px;
+}
+.access .box{
+    width: 60%;
+    height: 40px;
+    border-radius: 20px;
+    background: #7F8C8D;
+    align-items: center;
+    justify-content:space-around;
+    display: flex;
+}
+.access .box i{
+    color: #fff;
+}
+
+
+
+/* //ANIMATION  */
+
+
+
+.access .box i:hover{
+    background: #fff;
+    color: #ABEBC6;
+    padding: 5px ;
+    border-radius: 20px;
+}
+body{
+    transition:  all 1s;
+}
+.nav{
+    animation-name: fade;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out; 
+}
+@keyframes fade{
+    0%{
+        transform: scale(0.4);
+        transition: 0.5s;
+    }
+    100%{
+        transform: scale(1);
+        transform: 0.5s;
+    }
+
+    
+}
+.box{ 
+    animation: slide 0.7s ease-in-out;
+}
+@keyframes slide{
+    0%{
+        transform: translateX(200px);
+        transition: 0.5;
+    }
+    100%{
+        transform: translateX(0);
+        transition: 0.5;
+    }
+}
+
+.card{
+    animation: pop 0.5s ease-in-out;
+    transition: 0.5s;
+}
+@keyframes pop{
+    0%{
+        transform: translateY(30px);
+        transition: 0.2s;
+    }
+    100%{
+        transform: translateY(0px);
+        transition: 0.2s;
+    }
+}
+
+.bx .img img:hover{
+    transform: scale(1.2) rotate(25deg);
+    transition: 0.6s;
+}
+.bx .img img{transition: 0.6s;}
